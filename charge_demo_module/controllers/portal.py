@@ -8,7 +8,7 @@ class StudentPortal(CustomerPortal):
 
     def _get_student(self):
         """Helper method to get the student record of the currently logged-in user."""
-        return request.env['op.student'].search([('id', '=', request.env.user.student_id.id)], limit=1)
+        return request.env.user.student_id
 
     def _prepare_home_portal_values(self, counters):
         """Add subject and assignment counts to the portal home page."""

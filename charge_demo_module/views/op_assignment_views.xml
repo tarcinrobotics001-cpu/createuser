@@ -19,18 +19,18 @@
         </field>
     </record>
 
-    <!-- Tree View for Assignment -->
-    <record id="view_op_assignment_tree" model="ir.ui.view">
-        <field name="name">op.assignment.tree</field>
+    <!-- List View for Assignment -->
+    <record id="view_op_assignment_list" model="ir.ui.view">
+        <field name="name">op.assignment.list</field>
         <field name="model">op.assignment</field>
         <field name="arch" type="xml">
-            <tree string="Assignments">
+            <list string="Assignments">
                 <field name="name"/>
                 <field name="subject_id"/>
                 <field name="faculty_id"/>
                 <field name="student_id"/>
                 <field name="due_date"/>
-            </tree>
+            </list>
         </field>
     </record>
 
@@ -38,6 +38,6 @@
     <record id="action_op_assignment" model="ir.actions.act_window">
         <field name="name">Assignments</field>
         <field name="res_model">op.assignment</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
     </record>
 </odoo>
