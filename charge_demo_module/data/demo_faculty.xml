@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Demo Faculty Records -->
+        <record id="faculty_1" model="op.faculty">
+            <field name="first_name">Alan</field>
+            <field name="last_name">Smith</field>
+            <field name="email">alan.smith@demo.com</field>
+            <field name="phone">111-222-3301</field>
+            <field name="hire_date">2023-01-15</field>
+            <field name="department_id" ref="dept_mathematics"/>
+        </record>
+        <record id="faculty_2" model="op.faculty">
+            <field name="first_name">Betty</field>
+            <field name="last_name">Jones</field>
+            <field name="email">betty.jones@demo.com</field>
+            <field name="phone">111-222-3302</field>
+            <field name="hire_date">2022-08-20</field>
+            <field name="department_id" ref="dept_mathematics"/>
+        </record>
+        <record id="faculty_3" model="op.faculty">
+            <field name="first_name">Charles</field>
+            <field name="last_name">Day</field>
+            <field name="email">charles.day@demo.com</field>
+            <field name="phone">111-222-3303</field>
+            <field name="hire_date">2024-02-10</field>
+            <field name="department_id" ref="dept_mathematics"/>
+        </record>
+        <record id="faculty_4" model="op.faculty">
+            <field name="first_name">Diana</field>
+            <field name="last_name">Prince</field>
+            <field name="email">diana.prince@demo.com</field>
+            <field name="phone">111-222-3304</field>
+            <field name="hire_date">2020-05-25</field>
+            <field name="department_id" ref="dept_science"/>
+        </record>
+        <record id="faculty_5" model="op.faculty">
+            <field name="first_name">Edward</field>
+            <field name="last_name">Nigma</field>
+            <field name="email">edward.nigma@demo.com</field>
+            <field name="phone">111-222-3305</field>
+            <field name="hire_date">2021-11-05</field>
+            <field name="department_id" ref="dept_science"/>
+        </record>
+        <record id="faculty_6" model="op.faculty">
+            <field name="first_name">Fiona</field>
+            <field name="last_name">Glenanne</field>
+            <field name="email">fiona.glenanne@demo.com</field>
+            <field name="phone">111-222-3306</field>
+            <field name="hire_date">2023-07-12</field>
+            <field name="department_id" ref="dept_science"/>
+        </record>
+        <record id="faculty_7" model="op.faculty">
+            <field name="first_name">George</field>
+            <field name="last_name">Abitbol</field>
+            <field name="email">george.abitbol@demo.com</field>
+            <field name="phone">111-222-3307</field>
+            <field name="hire_date">2019-12-30</field>
+            <field name="department_id" ref="dept_computer_science"/>
+        </record>
+        <record id="faculty_8" model="op.faculty">
+            <field name="first_name">Helen</field>
+            <field name="last_name">Troy</field>
+            <field name="email">helen.troy@demo.com</field>
+            <field name="phone">111-222-3308</field>
+            <field name="hire_date">2024-04-18</field>
+            <field name="department_id" ref="dept_computer_science"/>
+        </record>
+        <record id="faculty_9" model="op.faculty">
+            <field name="first_name">Ian</field>
+            <field name="last_name">Malcolm</field>
+            <field name="email">ian.malcolm@demo.com</field>
+            <field name="phone">111-222-3309</field>
+            <field name="hire_date">2022-10-22</field>
+            <field name="department_id" ref="dept_computer_science"/>
+        </record>
+        <record id="faculty_10" model="op.faculty">
+            <field name="first_name">Jane</field>
+            <field name="last_name">Foster</field>
+            <field name="email">jane.foster@demo.com</field>
+            <field name="phone">111-222-3310</field>
+            <field name="hire_date">2023-08-01</field>
+            <field name="department_id" ref="dept_computer_science"/>
+        </record>
+    </data>
+</odoo>

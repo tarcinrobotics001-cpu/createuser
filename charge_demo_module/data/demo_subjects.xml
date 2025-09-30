@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Subjects -->
+        <record id="subject_calculus" model="op.subject">
+            <field name="name">Calculus I</field>
+            <field name="faculty_id" ref="faculty_1"/>
+            <field name="student_ids" eval="[(6, 0, [ref('student_1'), ref('student_2')])]"/>
+        </record>
+        <record id="subject_algebra" model="op.subject">
+            <field name="name">Linear Algebra</field>
+            <field name="faculty_id" ref="faculty_2"/>
+            <field name="student_ids" eval="[(6, 0, [ref('student_2'), ref('student_3')])]"/>
+        </record>
+        <record id="subject_physics" model="op.subject">
+            <field name="name">Physics I</field>
+            <field name="faculty_id" ref="faculty_4"/>
+            <field name="student_ids" eval="[(6, 0, [ref('student_4'), ref('student_5')])]"/>
+        </record>
+        <record id="subject_chemistry" model="op.subject">
+            <field name="name">Chemistry I</field>
+            <field name="faculty_id" ref="faculty_5"/>
+            <field name="student_ids" eval="[(6, 0, [ref('student_5'), ref('student_6')])]"/>
+        </record>
+        <record id="subject_programming" model="op.subject">
+            <field name="name">Intro to Programming</field>
+            <field name="faculty_id" ref="faculty_7"/>
+            <field name="student_ids" eval="[(6, 0, [ref('student_7'), ref('student_8')])]"/>
+        </record>
+        <record id="subject_datastruct" model="op.subject">
+            <field name="name">Data Structures</field>
+            <field name="faculty_id" ref="faculty_9"/>
+            <field name="student_ids" eval="[(6, 0, [ref('student_9'), ref('student_10')])]"/>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Demo Student Records -->
+        <record id="student_1" model="op.student">
+            <field name="first_name">Student</field>
+            <field name="last_name">One</field>
+            <field name="email">student.one@demo.com</field>
+            <field name="phone">222-333-4401</field>
+            <field name="birth_date">2005-01-15</field>
+            <field name="department_id" ref="dept_mathematics"/>
+        </record>
+        <record id="student_2" model="op.student">
+            <field name="first_name">Student</field>
+            <field name="last_name">Two</field>
+            <field name="email">student.two@demo.com</field>
+            <field name="phone">222-333-4402</field>
+            <field name="birth_date">2005-03-20</field>
+            <field name="department_id" ref="dept_mathematics"/>
+        </record>
+        <record id="student_3" model="op.student">
+            <field name="first_name">Student</field>
+            <field name="last_name">Three</field>
+            <field name="email">student.three@demo.com</field>
+            <field name="phone">222-333-4403</field>
+            <field name="birth_date">2004-11-10</field>
+            <field name="department_id" ref="dept_mathematics"/>
+        </record>
+        <record id="student_4" model="op.student">
+            <field name="first_name">Student</field>
+            <field name="last_name">Four</field>
+            <field name="email">student.four@demo.com</field>
+            <field name="phone">222-333-4404</field>
+            <field name="birth_date">2005-02-25</field>
+            <field name="department_id" ref="dept_science"/>
+        </record>
+        <record id="student_5" model="op.student">
+            <field name="first_name">Student</field>
+            <field name="last_name">Five</field>
+            <field name="email">student.five@demo.com</field>
+            <field name="phone">222-333-4405</field>
+            <field name="birth_date">2004-09-05</field>
+            <field name="department_id" ref="dept_science"/>
+        </record>
+        <record id="student_6" model="op.student">
+            <field name="first_name">Student</field>
+            <field name="last_name">Six</field>
+            <field name="email">student.six@demo.com</field>
+            <field name="phone">222-333-4406</field>
+            <field name="birth_date">2005-07-12</field>
+            <field name="department_id" ref="dept_science"/>
+        </record>
+        <record id="student_7" model="op.student">
+            <field name="first_name">Student</field>
+            <field name="last_name">Seven</field>
+            <field name="email">student.seven@demo.com</field>
+            <field name="phone">222-333-4407</field>
+            <field name="birth_date">2004-12-30</field>
+            <field name="department_id" ref="dept_computer_science"/>
+        </record>
+        <record id="student_8" model="op.student">
+            <field name="first_name">Student</field>
+            <field name="last_name">Eight</field>
+            <field name="email">student.eight@demo.com</field>
+            <field name="phone">222-333-4408</field>
+            <field name="birth_date">2005-04-18</field>
+            <field name="department_id" ref="dept_computer_science"/>
+        </record>
+        <record id="student_9" model="op.student">
+            <field name="first_name">Student</field>
+            <field name="last_name">Nine</field>
+            <field name="email">student.nine@demo.com</field>
+            <field name="phone">222-333-4409</field>
+            <field name="birth_date">2004-10-22</field>
+            <field name="department_id" ref="dept_computer_science"/>
+        </record>
+        <record id="student_10" model="op.student">
+            <field name="first_name">Student</field>
+            <field name="last_name">Ten</field>
+            <field name="email">student.ten@demo.com</field>
+            <field name="phone">222-333-4410</field>
+            <field name="birth_date">2005-08-01</field>
+            <field name="department_id" ref="dept_computer_science"/>
+        </record>
+    </data>
+</odoo>

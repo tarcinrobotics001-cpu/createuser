@@ -20,7 +20,11 @@
         'templates/student_portal_templates.xml',
     ],
     'demo': [
-        'data/demo_records.xml',
+        'data/demo_departments.xml',
+        'data/demo_faculty.xml',
+        'data/demo_students.xml',
+        'data/demo_subjects.xml',
+        'data/demo_assignments.xml',
         'data/demo_users.xml',
     ],
     'installable': True,
