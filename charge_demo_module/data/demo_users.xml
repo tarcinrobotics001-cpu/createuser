@@ -7,7 +7,7 @@
             <field name="last_name">Smith</field>
             <field name="email">alan.smith@demo.com</field>
             <field name="phone">111-222-3301</field>
-            <field name="hire_date" eval="(datetime.date.today() - datetime.timedelta(days=365*2)).strftime('%Y-%m-%d')"/>
+            <field name="hire_date" eval="fields.Date.today() - relativedelta(years=2)"/>
             <field name="department_id" ref="dept_mathematics"/>
         </record>
         <record id="faculty_2" model="op.faculty">
@@ -15,7 +15,7 @@
             <field name="last_name">Jones</field>
             <field name="email">betty.jones@demo.com</field>
             <field name="phone">111-222-3302</field>
-            <field name="hire_date" eval="(datetime.date.today() - datetime.timedelta(days=365*3)).strftime('%Y-%m-%d')"/>
+            <field name="hire_date" eval="fields.Date.today() - relativedelta(years=3)"/>
             <field name="department_id" ref="dept_mathematics"/>
         </record>
         <record id="faculty_3" model="op.faculty">
@@ -23,7 +23,7 @@
             <field name="last_name">Day</field>
             <field name="email">charles.day@demo.com</field>
             <field name="phone">111-222-3303</field>
-            <field name="hire_date" eval="(datetime.date.today() - datetime.timedelta(days=365*1)).strftime('%Y-%m-%d')"/>
+            <field name="hire_date" eval="fields.Date.today() - relativedelta(years=1)"/>
             <field name="department_id" ref="dept_mathematics"/>
         </record>
         <record id="faculty_4" model="op.faculty">
@@ -31,7 +31,7 @@
             <field name="last_name">Prince</field>
             <field name="email">diana.prince@demo.com</field>
             <field name="phone">111-222-3304</field>
-            <field name="hire_date" eval="(datetime.date.today() - datetime.timedelta(days=365*5)).strftime('%Y-%m-%d')"/>
+            <field name="hire_date" eval="fields.Date.today() - relativedelta(years=5)"/>
             <field name="department_id" ref="dept_science"/>
         </record>
         <record id="faculty_5" model="op.faculty">
@@ -39,7 +39,7 @@
             <field name="last_name">Nigma</field>
             <field name="email">edward.nigma@demo.com</field>
             <field name="phone">111-222-3305</field>
-            <field name="hire_date" eval="(datetime.date.today() - datetime.timedelta(days=365*4)).strftime('%Y-%m-%d')"/>
+            <field name="hire_date" eval="fields.Date.today() - relativedelta(years=4)"/>
             <field name="department_id" ref="dept_science"/>
         </record>
         <record id="faculty_6" model="op.faculty">
@@ -47,7 +47,7 @@
             <field name="last_name">Glenanne</field>
             <field name="email">fiona.glenanne@demo.com</field>
             <field name="phone">111-222-3306</field>
-            <field name="hire_date" eval="(datetime.date.today() - datetime.timedelta(days=365*2)).strftime('%Y-%m-%d')"/>
+            <field name="hire_date" eval="fields.Date.today() - relativedelta(years=2)"/>
             <field name="department_id" ref="dept_science"/>
         </record>
         <record id="faculty_7" model="op.faculty">
@@ -55,7 +55,7 @@
             <field name="last_name">Abitbol</field>
             <field name="email">george.abitbol@demo.com</field>
             <field name="phone">111-222-3307</field>
-            <field name="hire_date" eval="(datetime.date.today() - datetime.timedelta(days=365*6)).strftime('%Y-%m-%d')"/>
+            <field name="hire_date" eval="fields.Date.today() - relativedelta(years=6)"/>
             <field name="department_id" ref="dept_computer_science"/>
         </record>
         <record id="faculty_8" model="op.faculty">
@@ -63,7 +63,7 @@
             <field name="last_name">Troy</field>
             <field name="email">helen.troy@demo.com</field>
             <field name="phone">111-222-3308</field>
-            <field name="hire_date" eval="(datetime.date.today() - datetime.timedelta(days=365*1)).strftime('%Y-%m-%d')"/>
+            <field name="hire_date" eval="fields.Date.today() - relativedelta(years=1)"/>
             <field name="department_id" ref="dept_computer_science"/>
         </record>
         <record id="faculty_9" model="op.faculty">
@@ -71,7 +71,7 @@
             <field name="last_name">Malcolm</field>
             <field name="email">ian.malcolm@demo.com</field>
             <field name="phone">111-222-3309</field>
-            <field name="hire_date" eval="(datetime.date.today() - datetime.timedelta(days=365*3)).strftime('%Y-%m-%d')"/>
+            <field name="hire_date" eval="fields.Date.today() - relativedelta(years=3)"/>
             <field name="department_id" ref="dept_computer_science"/>
         </record>
         <record id="faculty_10" model="op.faculty">
@@ -79,7 +79,7 @@
             <field name="last_name">Foster</field>
             <field name="email">jane.foster@demo.com</field>
             <field name="phone">111-222-3310</field>
-            <field name="hire_date" eval="(datetime.date.today() - datetime.timedelta(days=365*2)).strftime('%Y-%m-%d')"/>
+            <field name="hire_date" eval="fields.Date.today() - relativedelta(years=2)"/>
             <field name="department_id" ref="dept_computer_science"/>
         </record>
 
