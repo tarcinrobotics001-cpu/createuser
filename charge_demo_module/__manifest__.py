@@ -18,6 +18,8 @@
         'views/op_assignment_views.xml',
         'views/menus.xml',
         'templates/student_portal_templates.xml',
+        'wizards/create_user_wizard_views.xml',
+        'wizards/create_student_wizard_views.xml',
     ],
     'demo': [
         'data/demo_departments.xml',
@@ -29,5 +31,4 @@
     'installable': True,
     'application': True,
     'auto_install': False,
-    'post_init_hook': 'post_init_hook',
 }

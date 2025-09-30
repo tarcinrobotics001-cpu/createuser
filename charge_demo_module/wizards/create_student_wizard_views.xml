@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Form View for the Create Student Wizard -->
+        <record id="create_student_wizard_form_view" model="ir.ui.view">
+            <field name="name">create.student.wizard.form</field>
+            <field name="model">charge_demo_module.create.student.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Create New Student">
+                    <group>
+                        <field name="first_name"/>
+                        <field name="last_name"/>
+                        <field name="email"/>
+                    </group>
+                    <footer>
+                        <button name="action_create_student" string="Create Student" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <!-- Window Action to open the Student Creation Wizard -->
+        <record id="create_student_wizard_action" model="ir.actions.act_window">
+            <field name="name">Create New Student</field>
+            <field name="res_model">charge_demo_module.create.student.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <!-- Menu Item for Students to access the Wizard -->
+        <!-- This menu item will be placed under the main 'Student' menu and will only be visible to students -->
+        <menuitem
+            id="menu_create_student_wizard"
+            name="Create Student"
+            action="create_student_wizard_action"
+            parent="charge_demo_module.menu_op_student_root"
+            sequence="20"
+            groups="charge_demo_module.group_openeducat_student_demo"/>
+
+    </data>
+</odoo>

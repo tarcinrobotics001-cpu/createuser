@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Form View for the Create User Wizard -->
+        <record id="create_user_wizard_form_view" model="ir.ui.view">
+            <field name="name">create.user.wizard.form</field>
+            <field name="model">charge_demo_module.create.user.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Create New Faculty User">
+                    <group>
+                        <field name="first_name"/>
+                        <field name="last_name"/>
+                        <field name="email"/>
+                    </group>
+                    <footer>
+                        <button name="action_create_user" string="Create Faculty User" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <!-- Window Action to open the Wizard -->
+        <record id="create_user_wizard_action" model="ir.actions.act_window">
+            <field name="name">Create New User</field>
+            <field name="res_model">charge_demo_module.create.user.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <!-- Menu Item for Faculty to access the Wizard -->
+        <!-- This menu item will be placed under the main 'Faculty' menu -->
+        <menuitem
+            id="menu_create_user_wizard"
+            name="Create User"
+            action="create_user_wizard_action"
+            parent="charge_demo_module.menu_op_faculty_root"
+            sequence="20"
+            groups="charge_demo_module.group_openeducat_faculty_demo"/>
+
+    </data>
+</odoo>

@@ -7,10 +7,10 @@
             <field name="model_id" ref="charge_demo_module.model_op_student"/>
             <field name="groups" eval="[(4, ref('group_openeducat_student_demo'))]"/>
             <field name="perm_read" eval="True"/>
-            <field name="perm_write" eval="False"/>
-            <field name="perm_create" eval="False"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
             <field name="perm_unlink" eval="False"/>
-            <field name="domain_force">[('id', '=', user.student_id.id)]</field>
+            <field name="domain_force">['|', ('id', '=', user.student_id.id), ('create_uid', '=', user.id)]</field>
         </record>
 
         <record id="op_assignment_student_rule" model="ir.rule">
