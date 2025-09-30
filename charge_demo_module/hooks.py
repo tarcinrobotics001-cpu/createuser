@@ -4,7 +4,7 @@ def _create_demo_users(env):
     """
     This function creates demo users for students and faculty, assigning them
     to the appropriate groups using a two-step create-then-write process
-    and the (4, id) command to be compatible with Odoo 19 CE.
+    and the (6, 0, [ids]) command to avoid exclusive group errors.
     """
     # --- Create Faculty Users ---
     faculty_group = env.ref('charge_demo_module.group_openeducat_faculty_demo')
@@ -22,8 +22,8 @@ def _create_demo_users(env):
             }
             # Create the user first, without groups
             user = env['res.users'].create(user_vals)
-            # Then, write the groups to the newly created user using the (4, id) command and the correct field name
-            user.write({'group_ids': [(4, faculty_group.id), (4, user_group.id)]})
+            # Then, replace all groups with the correct ones for a faculty member.
+            user.write({'group_ids': [(6, 0, [faculty_group.id, user_group.id])]})
 
     # --- Create Student Users ---
     student_group = env.ref('charge_demo_module.group_openeducat_student_demo')
@@ -41,8 +41,9 @@ def _create_demo_users(env):
             }
             # Create the user first, without groups
             user = env['res.users'].create(user_vals)
-            # Then, write the groups to the newly created user using the (4, id) command and the correct field name
-            user.write({'group_ids': [(4, student_group.id), (4, portal_group.id)]})
+            # Then, replace all groups with the correct ones for a portal user.
+            # This removes the default 'Internal User' group and prevents the exclusive group error.
+            user.write({'group_ids': [(6, 0, [student_group.id, portal_group.id])]})
 
 
 def post_init_hook(env):
