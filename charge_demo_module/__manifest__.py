@@ -25,10 +25,9 @@
         'data/demo_students.xml',
         'data/demo_subjects.xml',
         'data/demo_assignments.xml',
-        'data/demo_users.xml',
-        'data/demo_user_groups.xml',
     ],
     'installable': True,
     'application': True,
     'auto_install': False,
+    'post_init_hook': 'post_init_hook',
 }
