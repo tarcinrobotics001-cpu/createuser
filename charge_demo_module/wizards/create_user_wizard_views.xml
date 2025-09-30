@@ -21,23 +21,16 @@
             </field>
         </record>
 
-        <!-- Window Action to open the Wizard -->
+        <!-- Window Action to open the Wizard, bound to the op.faculty model -->
         <record id="create_user_wizard_action" model="ir.actions.act_window">
             <field name="name">Create New User</field>
             <field name="res_model">charge_demo_module.create.user.wizard</field>
             <field name="view_mode">form</field>
             <field name="target">new</field>
+            <field name="binding_model_id" ref="charge_demo_module.model_op_faculty"/>
+            <field name="groups" eval="[(4, ref('charge_demo_module.group_openeducat_faculty_demo'))]"/>
         </record>
 
-        <!-- Menu Item for Faculty to access the Wizard -->
-        <!-- This menu item will be placed under the main 'Faculty' menu -->
-        <menuitem
-            id="menu_create_user_wizard"
-            name="Create User"
-            action="create_user_wizard_action"
-            parent="charge_demo_module.menu_op_faculty"
-            sequence="20"
-            groups="charge_demo_module.group_openeducat_faculty_demo"/>
 
     </data>
 </odoo>
