@@ -28,7 +28,7 @@
             <field name="view_mode">form</field>
             <field name="target">new</field>
             <field name="binding_model_id" ref="charge_demo_module.model_op_student"/>
-            <field name="groups" eval="[(4, ref('charge_demo_module.group_openeducat_student_demo'))]"/>
+            <field name="groups_id" eval="[(4, ref('charge_demo_module.group_openeducat_student_demo'))]"/>
         </record>
 
 
