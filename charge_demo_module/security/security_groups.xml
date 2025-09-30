@@ -5,37 +5,12 @@
         <record id="group_openeducat_student_demo" model="res.groups">
             <field name="name">Student (Demo)</field>
             <field name="implied_ids" eval="[(4, ref('base.group_portal'))]"/>
-            <field name="users" eval="[
-                (4, ref('charge_demo_module.user_student_1')),
-                (4, ref('charge_demo_module.user_student_2')),
-                (4, ref('charge_demo_module.user_student_3')),
-                (4, ref('charge_demo_module.user_student_4')),
-                (4, ref('charge_demo_module.user_student_5')),
-                (4, ref('charge_demo_module.user_student_6')),
-                (4, ref('charge_demo_module.user_student_7')),
-                (4, ref('charge_demo_module.user_student_8')),
-                (4, ref('charge_demo_module.user_student_9')),
-                (4, ref('charge_demo_module.user_student_10')),
-            ]"/>
         </record>
 
         <!-- Faculty Group -->
         <record id="group_openeducat_faculty_demo" model="res.groups">
             <field name="name">Faculty (Demo)</field>
             <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
-            <field name="users" eval="[
-                (4, ref('charge_demo_module.user_faculty_1')),
-                (4, ref('charge_demo_module.user_faculty_2')),
-                (4, ref('charge_demo_module.user_faculty_3')),
-                (4, ref('charge_demo_module.user_faculty_4')),
-                (4, ref('charge_demo_module.user_faculty_5')),
-                (4, ref('charge_demo_module.user_faculty_6')),
-                (4, ref('charge_demo_module.user_faculty_7')),
-                (4, ref('charge_demo_module.user_faculty_8')),
-                (4, ref('charge_demo_module.user_faculty_9')),
-                (4, ref('charge_demo_module.user_faculty_10')),
-                (4, ref('base.user_admin'))
-            ]"/>
         </record>
     </data>
 </odoo>

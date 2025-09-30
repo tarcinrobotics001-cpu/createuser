@@ -7,6 +7,7 @@
             <field name="login">faculty1_demo</field>
             <field name="password">faculty1</field>
             <field name="email">faculty1@demo.com</field>
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_faculty_demo'), ref('base.group_user')])]"/>
             <field name="faculty_id" ref="charge_demo_module.faculty_1"/>
         </record>
         <record id="user_faculty_2" model="res.users">
@@ -14,6 +15,7 @@
             <field name="login">faculty2_demo</field>
             <field name="password">faculty2</field>
             <field name="email">faculty2@demo.com</field>
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_faculty_demo'), ref('base.group_user')])]"/>
             <field name="faculty_id" ref="charge_demo_module.faculty_2"/>
         </record>
         <record id="user_faculty_3" model="res.users">
@@ -21,6 +23,7 @@
             <field name="login">faculty3_demo</field>
             <field name="password">faculty3</field>
             <field name="email">faculty3@demo.com</field>
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_faculty_demo'), ref('base.group_user')])]"/>
             <field name="faculty_id" ref="charge_demo_module.faculty_3"/>
         </record>
         <record id="user_faculty_4" model="res.users">
@@ -28,6 +31,7 @@
             <field name="login">faculty4_demo</field>
             <field name="password">faculty4</field>
             <field name="email">faculty4@demo.com</field>
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_faculty_demo'), ref('base.group_user')])]"/>
             <field name="faculty_id" ref="charge_demo_module.faculty_4"/>
         </record>
         <record id="user_faculty_5" model="res.users">
@@ -35,6 +39,7 @@
             <field name="login">faculty5_demo</field>
             <field name="password">faculty5</field>
             <field name="email">faculty5@demo.com</field>
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_faculty_demo'), ref('base.group_user')])]"/>
             <field name="faculty_id" ref="charge_demo_module.faculty_5"/>
         </record>
         <record id="user_faculty_6" model="res.users">
@@ -42,6 +47,7 @@
             <field name="login">faculty6_demo</field>
             <field name="password">faculty6</field>
             <field name="email">faculty6@demo.com</field>
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_faculty_demo'), ref('base.group_user')])]"/>
             <field name="faculty_id" ref="charge_demo_module.faculty_6"/>
         </record>
         <record id="user_faculty_7" model="res.users">
@@ -49,6 +55,7 @@
             <field name="login">faculty7_demo</field>
             <field name="password">faculty7</field>
             <field name="email">faculty7@demo.com</field>
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_faculty_demo'), ref('base.group_user')])]"/>
             <field name="faculty_id" ref="charge_demo_module.faculty_7"/>
         </record>
         <record id="user_faculty_8" model="res.users">
@@ -56,6 +63,7 @@
             <field name="login">faculty8_demo</field>
             <field name="password">faculty8</field>
             <field name="email">faculty8@demo.com</field>
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_faculty_demo'), ref('base.group_user')])]"/>
             <field name="faculty_id" ref="charge_demo_module.faculty_8"/>
         </record>
         <record id="user_faculty_9" model="res.users">
@@ -63,6 +71,7 @@
             <field name="login">faculty9_demo</field>
             <field name="password">faculty9</field>
             <field name="email">faculty9@demo.com</field>
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_faculty_demo'), ref('base.group_user')])]"/>
             <field name="faculty_id" ref="charge_demo_module.faculty_9"/>
         </record>
         <record id="user_faculty_10" model="res.users">
@@ -70,6 +79,7 @@
             <field name="login">faculty10_demo</field>
             <field name="password">faculty10</field>
             <field name="email">faculty10@demo.com</field>
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_faculty_demo'), ref('base.group_user')])]"/>
             <field name="faculty_id" ref="charge_demo_module.faculty_10"/>
         </record>
 
@@ -79,6 +89,7 @@
             <field name="login">student1_demo</field>
             <field name="password">student1</field>
             <field name="email">student1@demo.com</field>
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_student_demo'), ref('base.group_portal')])]"/>
             <field name="student_id" ref="charge_demo_module.student_1"/>
         </record>
         <record id="user_student_2" model="res.users">
@@ -86,6 +97,7 @@
             <field name="login">student2_demo</field>
             <field name="password">student2</field>
             <field name="email">student2@demo.com</field>
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_student_demo'), ref('base.group_portal')])]"/>
             <field name="student_id" ref="charge_demo_module.student_2"/>
         </record>
         <record id="user_student_3" model="res.users">
@@ -93,6 +105,7 @@
             <field name="login">student3_demo</field>
             <field name="password">student3</field>
             <field name="email">student3@demo.com</field>
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_student_demo'), ref('base.group_portal')])]"/>
             <field name="student_id" ref="charge_demo_module.student_3"/>
         </record>
         <record id="user_student_4" model="res.users">
@@ -100,6 +113,7 @@
             <field name="login">student4_demo</field>
             <field name="password">student4</field>
             <field name="email">student4@demo.com</field>
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_student_demo'), ref('base.group_portal')])]"/>
             <field name="student_id" ref="charge_demo_module.student_4"/>
         </record>
         <record id="user_student_5" model="res.users">
@@ -107,6 +121,7 @@
             <field name="login">student5_demo</field>
             <field name="password">student5</field>
             <field name="email">student5@demo.com</field>
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_student_demo'), ref('base.group_portal')])]"/>
             <field name="student_id" ref="charge_demo_module.student_5"/>
         </record>
         <record id="user_student_6" model="res.users">
@@ -114,6 +129,7 @@
             <field name="login">student6_demo</field>
             <field name="password">student6</field>
             <field name="email">student6@demo.com</field>
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_student_demo'), ref('base.group_portal')])]"/>
             <field name="student_id" ref="charge_demo_module.student_6"/>
         </record>
         <record id="user_student_7" model="res.users">
@@ -121,6 +137,7 @@
             <field name="login">student7_demo</field>
             <field name="password">student7</field>
             <field name="email">student7@demo.com</field>
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_student_demo'), ref('base.group_portal')])]"/>
             <field name="student_id" ref="charge_demo_module.student_7"/>
         </record>
         <record id="user_student_8" model="res.users">
@@ -128,6 +145,7 @@
             <field name="login">student8_demo</field>
             <field name="password">student8</field>
             <field name="email">student8@demo.com</field>
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_student_demo'), ref('base.group_portal')])]"/>
             <field name="student_id" ref="charge_demo_module.student_8"/>
         </record>
         <record id="user_student_9" model="res.users">
@@ -135,6 +153,7 @@
             <field name="login">student9_demo</field>
             <field name="password">student9</field>
             <field name="email">student9@demo.com</field>
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_student_demo'), ref('base.group_portal')])]"/>
             <field name="student_id" ref="charge_demo_module.student_9"/>
         </record>
         <record id="user_student_10" model="res.users">
@@ -142,6 +161,7 @@
             <field name="login">student10_demo</field>
             <field name="password">student10</field>
             <field name="email">student10@demo.com</field>
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_student_demo'), ref('base.group_portal')])]"/>
             <field name="student_id" ref="charge_demo_module.student_10"/>
         </record>
     </data>
