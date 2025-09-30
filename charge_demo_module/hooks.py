@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 
-from odoo import api, SUPERUSER_ID
-
 def _create_demo_users(env):
     """
     This function creates demo users for students and faculty, assigning them
@@ -42,9 +40,9 @@ def _create_demo_users(env):
             env['res.users'].create(user_vals)
 
 
-def post_init_hook(cr, registry):
+def post_init_hook(env):
     """
     This hook is executed after the module is installed.
+    The `env` passed is a SUPERUSER environment.
     """
-    env = api.Environment(cr, SUPERUSER_ID, {})
     _create_demo_users(env)
