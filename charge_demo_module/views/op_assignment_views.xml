@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Form View for Assignment -->
+    <record id="view_op_assignment_form" model="ir.ui.view">
+        <field name="name">op.assignment.form</field>
+        <field name="model">op.assignment</field>
+        <field name="arch" type="xml">
+            <form string="Assignment">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="subject_id"/>
+                        <field name="faculty_id"/>
+                        <field name="student_id"/>
+                        <field name="due_date"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree View for Assignment -->
+    <record id="view_op_assignment_tree" model="ir.ui.view">
+        <field name="name">op.assignment.tree</field>
+        <field name="model">op.assignment</field>
+        <field name="arch" type="xml">
+            <tree string="Assignments">
+                <field name="name"/>
+                <field name="subject_id"/>
+                <field name="faculty_id"/>
+                <field name="student_id"/>
+                <field name="due_date"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Action for Assignment -->
+    <record id="action_op_assignment" model="ir.actions.act_window">
+        <field name="name">Assignments</field>
+        <field name="res_model">op.assignment</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

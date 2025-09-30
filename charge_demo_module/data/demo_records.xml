@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Departments -->
+        <record id="dept_mathematics" model="op.department">
+            <field name="name">Mathematics</field>
+        </record>
+        <record id="dept_science" model="op.department">
+            <field name="name">Science</field>
+        </record>
+        <record id="dept_computer_science" model="op.department">
+            <field name="name">Computer Science</field>
+        </record>
+
+        <!-- Subjects -->
+        <record id="subject_calculus" model="op.subject">
+            <field name="name">Calculus I</field>
+            <field name="faculty_id" ref="faculty_1"/>
+            <field name="student_ids" eval="[(6, 0, [ref('student_1'), ref('student_2')])]"/>
+        </record>
+        <record id="subject_algebra" model="op.subject">
+            <field name="name">Linear Algebra</field>
+            <field name="faculty_id" ref="faculty_2"/>
+            <field name="student_ids" eval="[(6, 0, [ref('student_2'), ref('student_3')])]"/>
+        </record>
+        <record id="subject_physics" model="op.subject">
+            <field name="name">Physics I</field>
+            <field name="faculty_id" ref="faculty_4"/>
+            <field name="student_ids" eval="[(6, 0, [ref('student_4'), ref('student_5')])]"/>
+        </record>
+        <record id="subject_chemistry" model="op.subject">
+            <field name="name">Chemistry I</field>
+            <field name="faculty_id" ref="faculty_5"/>
+            <field name="student_ids" eval="[(6, 0, [ref('student_5'), ref('student_6')])]"/>
+        </record>
+        <record id="subject_programming" model="op.subject">
+            <field name="name">Intro to Programming</field>
+            <field name="faculty_id" ref="faculty_7"/>
+            <field name="student_ids" eval="[(6, 0, [ref('student_7'), ref('student_8')])]"/>
+        </record>
+        <record id="subject_datastruct" model="op.subject">
+            <field name="name">Data Structures</field>
+            <field name="faculty_id" ref="faculty_9"/>
+            <field name="student_ids" eval="[(6, 0, [ref('student_9'), ref('student_10')])]"/>
+        </record>
+
+        <!-- Assignments -->
+        <record id="assignment_calculus_1" model="op.assignment">
+            <field name="name">Calculus Homework 1</field>
+            <field name="subject_id" ref="subject_calculus"/>
+            <field name="student_id" ref="student_1"/>
+            <field name="due_date" eval="(datetime.datetime.now() + datetime.timedelta(days=7)).strftime('%Y-%m-%d')"/>
+        </record>
+        <record id="assignment_algebra_1" model="op.assignment">
+            <field name="name">Algebra Homework 1</field>
+            <field name="subject_id" ref="subject_algebra"/>
+            <field name="student_id" ref="student_2"/>
+            <field name="due_date" eval="(datetime.datetime.now() + datetime.timedelta(days=8)).strftime('%Y-%m-%d')"/>
+        </record>
+        <record id="assignment_physics_1" model="op.assignment">
+            <field name="name">Physics Lab Report</field>
+            <field name="subject_id" ref="subject_physics"/>
+            <field name="student_id" ref="student_4"/>
+            <field name="due_date" eval="(datetime.datetime.now() + datetime.timedelta(days=9)).strftime('%Y-%m-%d')"/>
+        </record>
+        <record id="assignment_chem_1" model="op.assignment">
+            <field name="name">Chemistry Worksheet</field>
+            <field name="subject_id" ref="subject_chemistry"/>
+            <field name="student_id" ref="student_5"/>
+            <field name="due_date" eval="(datetime.datetime.now() + datetime.timedelta(days=10)).strftime('%Y-%m-%d')"/>
+        </record>
+        <record id="assignment_prog_1" model="op.assignment">
+            <field name="name">Programming Assignment 1</field>
+            <field name="subject_id" ref="subject_programming"/>
+            <field name="student_id" ref="student_7"/>
+            <field name="due_date" eval="(datetime.datetime.now() + datetime.timedelta(days=11)).strftime('%Y-%m-%d')"/>
+        </record>
+        <record id="assignment_ds_1" model="op.assignment">
+            <field name="name">Data Structures Project</field>
+            <field name="subject_id" ref="subject_datastruct"/>
+            <field name="student_id" ref="student_9"/>
+            <field name="due_date" eval="(datetime.datetime.now() + datetime.timedelta(days=12)).strftime('%Y-%m-%d')"/>
+        </record>
+    </data>
+</odoo>

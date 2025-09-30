@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Top-level Menu -->
+    <menuitem
+        id="menu_education_root"
+        name="Education Demo"
+        sequence="10"/>
+
+    <!-- Sub-menu for main records -->
+    <menuitem
+        id="menu_education_main"
+        name="Core"
+        parent="menu_education_root"
+        sequence="10"/>
+
+    <!-- Sub-menu for configuration -->
+    <menuitem
+        id="menu_education_config"
+        name="Configuration"
+        parent="menu_education_root"
+        sequence="100"/>
+
+    <!-- Menu for Students -->
+    <menuitem
+        id="menu_op_student"
+        name="Students"
+        parent="menu_education_main"
+        action="charge_demo_module.action_op_student"
+        sequence="10"/>
+
+    <!-- Menu for Faculty -->
+    <menuitem
+        id="menu_op_faculty"
+        name="Faculty"
+        parent="menu_education_main"
+        action="charge_demo_module.action_op_faculty"
+        sequence="20"/>
+
+    <!-- Menu for Assignments -->
+    <menuitem
+        id="menu_op_assignment"
+        name="Assignments"
+        parent="menu_education_main"
+        action="charge_demo_module.action_op_assignment"
+        sequence="30"/>
+
+    <!-- Menu for Departments -->
+    <menuitem
+        id="menu_op_department"
+        name="Departments"
+        parent="menu_education_config"
+        action="charge_demo_module.action_op_department"
+        sequence="10"/>
+
+    <!-- Menu for Subjects -->
+    <menuitem
+        id="menu_op_subject"
+        name="Subjects"
+        parent="menu_education_config"
+        action="charge_demo_module.action_op_subject"
+        sequence="20"/>
+</odoo>

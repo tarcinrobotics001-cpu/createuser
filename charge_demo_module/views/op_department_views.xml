@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Form View for Department -->
+    <record id="view_op_department_form" model="ir.ui.view">
+        <field name="name">op.department.form</field>
+        <field name="model">op.department</field>
+        <field name="arch" type="xml">
+            <form string="Department">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                    <notebook>
+                        <page string="Faculties">
+                            <field name="faculty_ids"/>
+                        </page>
+                        <page string="Students">
+                            <field name="student_ids"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree View for Department -->
+    <record id="view_op_department_tree" model="ir.ui.view">
+        <field name="name">op.department.tree</field>
+        <field name="model">op.department</field>
+        <field name="arch" type="xml">
+            <tree string="Departments">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Action for Department -->
+    <record id="action_op_department" model="ir.actions.act_window">
+        <field name="name">Departments</field>
+        <field name="res_model">op.department</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

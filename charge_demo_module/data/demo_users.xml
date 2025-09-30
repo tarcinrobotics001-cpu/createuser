@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Demo Faculty Records -->
+        <record id="faculty_1" model="op.faculty">
+            <field name="first_name">Alan</field>
+            <field name="last_name">Smith</field>
+            <field name="email">alan.smith@demo.com</field>
+            <field name="phone">111-222-3301</field>
+            <field name="hire_date" eval="(datetime.date.today() - datetime.timedelta(days=365*2)).strftime('%Y-%m-%d')"/>
+            <field name="department_id" ref="dept_mathematics"/>
+        </record>
+        <record id="faculty_2" model="op.faculty">
+            <field name="first_name">Betty</field>
+            <field name="last_name">Jones</field>
+            <field name="email">betty.jones@demo.com</field>
+            <field name="phone">111-222-3302</field>
+            <field name="hire_date" eval="(datetime.date.today() - datetime.timedelta(days=365*3)).strftime('%Y-%m-%d')"/>
+            <field name="department_id" ref="dept_mathematics"/>
+        </record>
+        <record id="faculty_3" model="op.faculty">
+            <field name="first_name">Charles</field>
+            <field name="last_name">Day</field>
+            <field name="email">charles.day@demo.com</field>
+            <field name="phone">111-222-3303</field>
+            <field name="hire_date" eval="(datetime.date.today() - datetime.timedelta(days=365*1)).strftime('%Y-%m-%d')"/>
+            <field name="department_id" ref="dept_mathematics"/>
+        </record>
+        <record id="faculty_4" model="op.faculty">
+            <field name="first_name">Diana</field>
+            <field name="last_name">Prince</field>
+            <field name="email">diana.prince@demo.com</field>
+            <field name="phone">111-222-3304</field>
+            <field name="hire_date" eval="(datetime.date.today() - datetime.timedelta(days=365*5)).strftime('%Y-%m-%d')"/>
+            <field name="department_id" ref="dept_science"/>
+        </record>
+        <record id="faculty_5" model="op.faculty">
+            <field name="first_name">Edward</field>
+            <field name="last_name">Nigma</field>
+            <field name="email">edward.nigma@demo.com</field>
+            <field name="phone">111-222-3305</field>
+            <field name="hire_date" eval="(datetime.date.today() - datetime.timedelta(days=365*4)).strftime('%Y-%m-%d')"/>
+            <field name="department_id" ref="dept_science"/>
+        </record>
+        <record id="faculty_6" model="op.faculty">
+            <field name="first_name">Fiona</field>
+            <field name="last_name">Glenanne</field>
+            <field name="email">fiona.glenanne@demo.com</field>
+            <field name="phone">111-222-3306</field>
+            <field name="hire_date" eval="(datetime.date.today() - datetime.timedelta(days=365*2)).strftime('%Y-%m-%d')"/>
+            <field name="department_id" ref="dept_science"/>
+        </record>
+        <record id="faculty_7" model="op.faculty">
+            <field name="first_name">George</field>
+            <field name="last_name">Abitbol</field>
+            <field name="email">george.abitbol@demo.com</field>
+            <field name="phone">111-222-3307</field>
+            <field name="hire_date" eval="(datetime.date.today() - datetime.timedelta(days=365*6)).strftime('%Y-%m-%d')"/>
+            <field name="department_id" ref="dept_computer_science"/>
+        </record>
+        <record id="faculty_8" model="op.faculty">
+            <field name="first_name">Helen</field>
+            <field name="last_name">Troy</field>
+            <field name="email">helen.troy@demo.com</field>
+            <field name="phone">111-222-3308</field>
+            <field name="hire_date" eval="(datetime.date.today() - datetime.timedelta(days=365*1)).strftime('%Y-%m-%d')"/>
+            <field name="department_id" ref="dept_computer_science"/>
+        </record>
+        <record id="faculty_9" model="op.faculty">
+            <field name="first_name">Ian</field>
+            <field name="last_name">Malcolm</field>
+            <field name="email">ian.malcolm@demo.com</field>
+            <field name="phone">111-222-3309</field>
+            <field name="hire_date" eval="(datetime.date.today() - datetime.timedelta(days=365*3)).strftime('%Y-%m-%d')"/>
+            <field name="department_id" ref="dept_computer_science"/>
+        </record>
+        <record id="faculty_10" model="op.faculty">
+            <field name="first_name">Jane</field>
+            <field name="last_name">Foster</field>
+            <field name="email">jane.foster@demo.com</field>
+            <field name="phone">111-222-3310</field>
+            <field name="hire_date" eval="(datetime.date.today() - datetime.timedelta(days=365*2)).strftime('%Y-%m-%d')"/>
+            <field name="department_id" ref="dept_computer_science"/>
+        </record>
+
+        <!-- Demo Student Records -->
+        <record id="student_1" model="op.student">
+            <field name="first_name">Student</field>
+            <field name="last_name">One</field>
+            <field name="email">student.one@demo.com</field>
+            <field name="phone">222-333-4401</field>
+            <field name="birth_date">2005-01-15</field>
+            <field name="department_id" ref="dept_mathematics"/>
+        </record>
+        <record id="student_2" model="op.student">
+            <field name="first_name">Student</field>
+            <field name="last_name">Two</field>
+            <field name="email">student.two@demo.com</field>
+            <field name="phone">222-333-4402</field>
+            <field name="birth_date">2005-03-20</field>
+            <field name="department_id" ref="dept_mathematics"/>
+        </record>
+        <record id="student_3" model="op.student">
+            <field name="first_name">Student</field>
+            <field name="last_name">Three</field>
+            <field name="email">student.three@demo.com</field>
+            <field name="phone">222-333-4403</field>
+            <field name="birth_date">2004-11-10</field>
+            <field name="department_id" ref="dept_mathematics"/>
+        </record>
+        <record id="student_4" model="op.student">
+            <field name="first_name">Student</field>
+            <field name="last_name">Four</field>
+            <field name="email">student.four@demo.com</field>
+            <field name="phone">222-333-4404</field>
+            <field name="birth_date">2005-02-25</field>
+            <field name="department_id" ref="dept_science"/>
+        </record>
+        <record id="student_5" model="op.student">
+            <field name="first_name">Student</field>
+            <field name="last_name">Five</field>
+            <field name="email">student.five@demo.com</field>
+            <field name="phone">222-333-4405</field>
+            <field name="birth_date">2004-09-05</field>
+            <field name="department_id" ref="dept_science"/>
+        </record>
+        <record id="student_6" model="op.student">
+            <field name="first_name">Student</field>
+            <field name="last_name">Six</field>
+            <field name="email">student.six@demo.com</field>
+            <field name="phone">222-333-4406</field>
+            <field name="birth_date">2005-07-12</field>
+            <field name="department_id" ref="dept_science"/>
+        </record>
+        <record id="student_7" model="op.student">
+            <field name="first_name">Student</field>
+            <field name="last_name">Seven</field>
+            <field name="email">student.seven@demo.com</field>
+            <field name="phone">222-333-4407</field>
+            <field name="birth_date">2004-12-30</field>
+            <field name="department_id" ref="dept_computer_science"/>
+        </record>
+        <record id="student_8" model="op.student">
+            <field name="first_name">Student</field>
+            <field name="last_name">Eight</field>
+            <field name="email">student.eight@demo.com</field>
+            <field name="phone">222-333-4408</field>
+            <field name="birth_date">2005-04-18</field>
+            <field name="department_id" ref="dept_computer_science"/>
+        </record>
+        <record id="student_9" model="op.student">
+            <field name="first_name">Student</field>
+            <field name="last_name">Nine</field>
+            <field name="email">student.nine@demo.com</field>
+            <field name="phone">222-333-4409</field>
+            <field name="birth_date">2004-10-22</field>
+            <field name="department_id" ref="dept_computer_science"/>
+        </record>
+        <record id="student_10" model="op.student">
+            <field name="first_name">Student</field>
+            <field name="last_name">Ten</field>
+            <field name="email">student.ten@demo.com</field>
+            <field name="phone">222-333-4410</field>
+            <field name="birth_date">2005-08-01</field>
+            <field name="department_id" ref="dept_computer_science"/>
+        </record>
+
+        <!-- Demo Faculty Users -->
+        <record id="user_faculty_1" model="res.users">
+            <field name="name">Faculty 1 Demo</field>
+            <field name="login">faculty1_demo</field>
+            <field name="password">faculty1</field>
+            <field name="email">faculty1@demo.com</field>
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_faculty_demo'), ref('base.group_user')])]"/>
+            <field name="faculty_id" ref="faculty_1"/>
+        </record>
+        <record id="user_faculty_2" model="res.users">
+            <field name="name">Faculty 2 Demo</field>
+            <field name="login">faculty2_demo</field>
+            <field name="password">faculty2</field>
+            <field name="email">faculty2@demo.com</field>
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_faculty_demo'), ref('base.group_user')])]"/>
+            <field name="faculty_id" ref="faculty_2"/>
+        </record>
+        <record id="user_faculty_3" model="res.users">
+            <field name="name">Faculty 3 Demo</field>
+            <field name="login">faculty3_demo</field>
+            <field name="password">faculty3</field>
+            <field name="email">faculty3@demo.com</field>
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_faculty_demo'), ref('base.group_user')])]"/>
+            <field name="faculty_id" ref="faculty_3"/>
+        </record>
+        <record id="user_faculty_4" model="res.users">
+            <field name="name">Faculty 4 Demo</field>
+            <field name="login">faculty4_demo</field>
+            <field name="password">faculty4</field>
+            <field name="email">faculty4@demo.com</field>
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_faculty_demo'), ref('base.group_user')])]"/>
+            <field name="faculty_id" ref="faculty_4"/>
+        </record>
+        <record id="user_faculty_5" model="res.users">
+            <field name="name">Faculty 5 Demo</field>
+            <field name="login">faculty5_demo</field>
+            <field name="password">faculty5</field>
+            <field name="email">faculty5@demo.com</field>
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_faculty_demo'), ref('base.group_user')])]"/>
+            <field name="faculty_id" ref="faculty_5"/>
+        </record>
+        <record id="user_faculty_6" model="res.users">
+            <field name="name">Faculty 6 Demo</field>
+            <field name="login">faculty6_demo</field>
+            <field name="password">faculty6</field>
+            <field name="email">faculty6@demo.com</field>
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_faculty_demo'), ref('base.group_user')])]"/>
+            <field name="faculty_id" ref="faculty_6"/>
+        </record>
+        <record id="user_faculty_7" model="res.users">
+            <field name="name">Faculty 7 Demo</field>
+            <field name="login">faculty7_demo</field>
+            <field name="password">faculty7</field>
+            <field name="email">faculty7@demo.com</field>
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_faculty_demo'), ref('base.group_user')])]"/>
+            <field name="faculty_id" ref="faculty_7"/>
+        </record>
+        <record id="user_faculty_8" model="res.users">
+            <field name="name">Faculty 8 Demo</field>
+            <field name="login">faculty8_demo</field>
+            <field name="password">faculty8</field>
+            <field name="email">faculty8@demo.com</field>
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_faculty_demo'), ref('base.group_user')])]"/>
+            <field name="faculty_id" ref="faculty_8"/>
+        </record>
+        <record id="user_faculty_9" model="res.users">
+            <field name="name">Faculty 9 Demo</field>
+            <field name="login">faculty9_demo</field>
+            <field name="password">faculty9</field>
+            <field name="email">faculty9@demo.com</field>
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_faculty_demo'), ref('base.group_user')])]"/>
+            <field name="faculty_id" ref="faculty_9"/>
+        </record>
+        <record id="user_faculty_10" model="res.users">
+            <field name="name">Faculty 10 Demo</field>
+            <field name="login">faculty10_demo</field>
+            <field name="password">faculty10</field>
+            <field name="email">faculty10@demo.com</field>
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_faculty_demo'), ref('base.group_user')])]"/>
+            <field name="faculty_id" ref="faculty_10"/>
+        </record>
+
+        <!-- Demo Student Users -->
+        <record id="user_student_1" model="res.users">
+            <field name="name">Student 1 Demo</field>
+            <field name="login">student1_demo</field>
+            <field name="password">student1</field>
+            <field name="email">student1@demo.com</field>
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_student_demo'), ref('base.group_portal')])]"/>
+            <field name="student_id" ref="student_1"/>
+        </record>
+        <record id="user_student_2" model="res.users">
+            <field name="name">Student 2 Demo</field>
+            <field name="login">student2_demo</field>
+            <field name="password">student2</field>
+            <field name="email">student2@demo.com</field>
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_student_demo'), ref('base.group_portal')])]"/>
+            <field name="student_id" ref="student_2"/>
+        </record>
+        <record id="user_student_3" model="res.users">
+            <field name="name">Student 3 Demo</field>
+            <field name="login">student3_demo</field>
+            <field name="password">student3</field>
+            <field name="email">student3@demo.com</field>
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_student_demo'), ref('base.group_portal')])]"/>
+            <field name="student_id" ref="student_3"/>
+        </record>
+        <record id="user_student_4" model="res.users">
+            <field name="name">Student 4 Demo</field>
+            <field name="login">student4_demo</field>
+            <field name="password">student4</field>
+            <field name="email">student4@demo.com</field>
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_student_demo'), ref('base.group_portal')])]"/>
+            <field name="student_id" ref="student_4"/>
+        </record>
+        <record id="user_student_5" model="res.users">
+            <field name="name">Student 5 Demo</field>
+            <field name="login">student5_demo</field>
+            <field name="password">student5</field>
+            <field name="email">student5@demo.com</field>
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_student_demo'), ref('base.group_portal')])]"/>
+            <field name="student_id" ref="student_5"/>
+        </record>
+        <record id="user_student_6" model="res.users">
+            <field name="name">Student 6 Demo</field>
+            <field name="login">student6_demo</field>
+            <field name="password">student6</field>
+            <field name="email">student6@demo.com</field>
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_student_demo'), ref('base.group_portal')])]"/>
+            <field name="student_id" ref="student_6"/>
+        </record>
+        <record id="user_student_7" model="res.users">
+            <field name="name">Student 7 Demo</field>
+            <field name="login">student7_demo</field>
+            <field name="password">student7</field>
+            <field name="email">student7@demo.com</field>
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_student_demo'), ref('base.group_portal')])]"/>
+            <field name="student_id" ref="student_7"/>
+        </record>
+        <record id="user_student_8" model="res.users">
+            <field name="name">Student 8 Demo</field>
+            <field name="login">student8_demo</field>
+            <field name="password">student8</field>
+            <field name="email">student8@demo.com</field>
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_student_demo'), ref('base.group_portal')])]"/>
+            <field name="student_id" ref="student_8"/>
+        </record>
+        <record id="user_student_9" model="res.users">
+            <field name="name">Student 9 Demo</field>
+            <field name="login">student9_demo</field>
+            <field name="password">student9</field>
+            <field name="email">student9@demo.com</field>
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_student_demo'), ref('base.group_portal')])]"/>
+            <field name="student_id" ref="student_9"/>
+        </record>
+        <record id="user_student_10" model="res.users">
+            <field name="name">Student 10 Demo</field>
+            <field name="login">student10_demo</field>
+            <field name="password">student10</field>
+            <field name="email">student10@demo.com</field>
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_student_demo'), ref('base.group_portal')])]"/>
+            <field name="student_id" ref="student_10"/>
+        </record>
+    </data>
+</odoo>
