@@ -8,8 +8,9 @@
     'website': 'https://www.example.com',
     'depends': ['portal'],
     'data': [
-        'security/demo_security.xml',
+        'security/security_groups.xml',
         'security/ir.model.access.csv',
+        'security/record_rules.xml',
         'views/op_student_views.xml',
         'views/op_faculty_views.xml',
         'views/op_department_views.xml',
