@@ -16,6 +16,7 @@
         'views/op_subject_views.xml',
         'views/op_assignment_views.xml',
         'views/menus.xml',
+        'templates/student_portal_templates.xml',
     ],
     'demo': [
         'data/demo_users.xml',

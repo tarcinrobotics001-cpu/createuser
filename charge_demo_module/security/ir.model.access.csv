@@ -5,7 +5,7 @@ access_op_department_admin,op.department admin,model_op_department,base.group_sy
 access_op_subject_admin,op.subject admin,model_op_subject,base.group_system,1,1,1,1
 access_op_assignment_admin,op.assignment admin,model_op_assignment,base.group_system,1,1,1,1
 
-access_op_student_faculty,op.student faculty,model_op_student,charge_demo_module.group_openeducat_faculty_demo,1,0,0,0
+access_op_student_faculty,op.student faculty,model_op_student,charge_demo_module.group_openeducat_faculty_demo,1,1,1,1
 access_op_faculty_faculty,op.faculty faculty,model_op_faculty,charge_demo_module.group_openeducat_faculty_demo,1,0,0,0
 access_op_department_faculty,op.department faculty,model_op_department,charge_demo_module.group_openeducat_faculty_demo,1,0,0,0
 access_op_subject_faculty,op.subject faculty,model_op_subject,charge_demo_module.group_openeducat_faculty_demo,1,1,1,1

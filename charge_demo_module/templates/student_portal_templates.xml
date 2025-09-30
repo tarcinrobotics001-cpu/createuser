@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Inherit portal home to add subject and assignment counts -->
+    <template id="portal_my_home_demo" name="Portal My Home Demo" inherit_id="portal.portal_my_home" priority="20">
+        <xpath expr="//div[hasclass('o_portal_docs')]" position="inside">
+            <t t-if="subject_count">
+                <a class="list-group-item list-group-item-action" href="/my/subjects">
+                    <span class="badge badge-pill badge-info" t-esc="subject_count"/>
+                    My Subjects
+                </a>
+            </t>
+            <t t-if="assignment_count">
+                <a class="list-group-item list-group-item-action" href="/my/assignments">
+                    <span class="badge badge-pill badge-info" t-esc="assignment_count"/>
+                    My Assignments
+                </a>
+            </t>
+        </xpath>
+    </template>
+
+    <!-- Template for the list of subjects -->
+    <template id="portal_my_subjects" name="My Subjects">
+        <t t-call="portal.portal_layout">
+            <t t-set="breadcrumbs_searchbar_hidden" t-value="True"/>
+            <t t-call="portal.portal_searchbar">
+                <t t-set="title">My Subjects</t>
+            </t>
+            <t t-if="subjects" t-call="portal.portal_table">
+                <thead>
+                    <tr class="active">
+                        <th>Subject Name</th>
+                        <th>Faculty</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <t t-foreach="subjects" t-as="subject">
+                        <tr>
+                            <td><t t-esc="subject.name"/></td>
+                            <td><t t-esc="subject.faculty_id.name"/></td>
+                        </tr>
+                    </t>
+                </tbody>
+            </t>
+        </t>
+    </template>
+
+    <!-- Template for the list of assignments -->
+    <template id="portal_my_assignments" name="My Assignments">
+        <t t-call="portal.portal_layout">
+            <t t-set="breadcrumbs_searchbar_hidden" t-value="True"/>
+            <t t-call="portal.portal_searchbar">
+                <t t-set="title">My Assignments</t>
+            </t>
+            <t t-if="assignments" t-call="portal.portal_table">
+                <thead>
+                    <tr class="active">
+                        <th>Assignment Name</th>
+                        <th>Subject</th>
+                        <th>Due Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <t t-foreach="assignments" t-as="assignment">
+                        <tr>
+                            <td><t t-esc="assignment.name"/></td>
+                            <td><t t-esc="assignment.subject_id.name"/></td>
+                            <td><t t-esc="assignment.due_date" t-options='{"widget": "date"}'/></td>
+                        </tr>
+                    </t>
+                </tbody>
+            </t>
+        </t>
+    </template>
+</odoo>

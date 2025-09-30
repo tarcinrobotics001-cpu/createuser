@@ -28,3 +28,16 @@ class OpStudent(models.Model):
         for student in self:
             parts = [student.first_name, student.middle_name, student.last_name]
             student.name = ' '.join(part for part in parts if part)
+
+    @api.model
+    def create(self, vals):
+        """
+        Override create to enforce that faculty can only create students
+        in their own department.
+        """
+        user = self.env.user
+        if user.faculty_id and user.faculty_id.department_id:
+            # If the creator is a faculty member, force the student's
+            # department to match the faculty's department.
+            vals['department_id'] = user.faculty_id.department_id.id
+        return super(OpStudent, self).create(vals)
