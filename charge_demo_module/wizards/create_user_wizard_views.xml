@@ -35,7 +35,7 @@
             id="menu_create_user_wizard"
             name="Create User"
             action="create_user_wizard_action"
-            parent="charge_demo_module.menu_op_faculty_root"
+            parent="charge_demo_module.menu_op_faculty"
             sequence="20"
             groups="charge_demo_module.group_openeducat_faculty_demo"/>
 
