@@ -26,6 +26,7 @@
         'data/demo_subjects.xml',
         'data/demo_assignments.xml',
         'data/demo_users.xml',
+        'data/demo_user_groups.xml',
     ],
     'installable': True,
     'application': True,

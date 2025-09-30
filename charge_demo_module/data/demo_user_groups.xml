@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Assign Groups to Faculty Users -->
+        <record id="user_faculty_1" model="res.users">
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_faculty_demo'), ref('base.group_user')])]"/>
+        </record>
+        <record id="user_faculty_2" model="res.users">
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_faculty_demo'), ref('base.group_user')])]"/>
+        </record>
+        <record id="user_faculty_3" model="res.users">
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_faculty_demo'), ref('base.group_user')])]"/>
+        </record>
+        <record id="user_faculty_4" model="res.users">
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_faculty_demo'), ref('base.group_user')])]"/>
+        </record>
+        <record id="user_faculty_5" model="res.users">
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_faculty_demo'), ref('base.group_user')])]"/>
+        </record>
+        <record id="user_faculty_6" model="res.users">
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_faculty_demo'), ref('base.group_user')])]"/>
+        </record>
+        <record id="user_faculty_7" model="res.users">
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_faculty_demo'), ref('base.group_user')])]"/>
+        </record>
+        <record id="user_faculty_8" model="res.users">
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_faculty_demo'), ref('base.group_user')])]"/>
+        </record>
+        <record id="user_faculty_9" model="res.users">
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_faculty_demo'), ref('base.group_user')])]"/>
+        </record>
+        <record id="user_faculty_10" model="res.users">
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_faculty_demo'), ref('base.group_user')])]"/>
+        </record>
+
+        <!-- Assign Groups to Student Users -->
+        <record id="user_student_1" model="res.users">
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_student_demo'), ref('base.group_portal')])]"/>
+        </record>
+        <record id="user_student_2" model="res.users">
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_student_demo'), ref('base.group_portal')])]"/>
+        </record>
+        <record id="user_student_3" model="res.users">
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_student_demo'), ref('base.group_portal')])]"/>
+        </record>
+        <record id="user_student_4" model="res.users">
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_student_demo'), ref('base.group_portal')])]"/>
+        </record>
+        <record id="user_student_5" model="res.users">
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_student_demo'), ref('base.group_portal')])]"/>
+        </record>
+        <record id="user_student_6" model="res.users">
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_student_demo'), ref('base.group_portal')])]"/>
+        </record>
+        <record id="user_student_7" model="res.users">
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_student_demo'), ref('base.group_portal')])]"/>
+        </record>
+        <record id="user_student_8" model="res.users">
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_student_demo'), ref('base.group_portal')])]"/>
+        </record>
+        <record id="user_student_9" model="res.users">
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_student_demo'), ref('base.group_portal')])]"/>
+        </record>
+        <record id="user_student_10" model="res.users">
+            <field name="groups_id" eval="[(6, 0, [ref('charge_demo_module.group_openeducat_student_demo'), ref('base.group_portal')])]"/>
+        </record>
+    </data>
+</odoo>
