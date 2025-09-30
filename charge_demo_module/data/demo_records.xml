@@ -49,37 +49,37 @@
             <field name="name">Calculus Homework 1</field>
             <field name="subject_id" ref="subject_calculus"/>
             <field name="student_id" ref="student_1"/>
-            <field name="due_date" eval="fields.Date.today() + relativedelta(days=7)"/>
+            <field name="due_date">2025-10-07</field>
         </record>
         <record id="assignment_algebra_1" model="op.assignment">
             <field name="name">Algebra Homework 1</field>
             <field name="subject_id" ref="subject_algebra"/>
             <field name="student_id" ref="student_2"/>
-            <field name="due_date" eval="fields.Date.today() + relativedelta(days=8)"/>
+            <field name="due_date">2025-10-08</field>
         </record>
         <record id="assignment_physics_1" model="op.assignment">
             <field name="name">Physics Lab Report</field>
             <field name="subject_id" ref="subject_physics"/>
             <field name="student_id" ref="student_4"/>
-            <field name="due_date" eval="fields.Date.today() + relativedelta(days=9)"/>
+            <field name="due_date">2025-10-09</field>
         </record>
         <record id="assignment_chem_1" model="op.assignment">
             <field name="name">Chemistry Worksheet</field>
             <field name="subject_id" ref="subject_chemistry"/>
             <field name="student_id" ref="student_5"/>
-            <field name="due_date" eval="fields.Date.today() + relativedelta(days=10)"/>
+            <field name="due_date">2025-10-10</field>
         </record>
         <record id="assignment_prog_1" model="op.assignment">
             <field name="name">Programming Assignment 1</field>
             <field name="subject_id" ref="subject_programming"/>
             <field name="student_id" ref="student_7"/>
-            <field name="due_date" eval="fields.Date.today() + relativedelta(days=11)"/>
+            <field name="due_date">2025-10-11</field>
         </record>
         <record id="assignment_ds_1" model="op.assignment">
             <field name="name">Data Structures Project</field>
             <field name="subject_id" ref="subject_datastruct"/>
             <field name="student_id" ref="student_9"/>
-            <field name="due_date" eval="fields.Date.today() + relativedelta(days=12)"/>
+            <field name="due_date">2025-10-12</field>
         </record>
     </data>
 </odoo>
