@@ -3,7 +3,8 @@
 def _create_demo_users(env):
     """
     This function creates demo users for students and faculty, assigning them
-    to the appropriate groups.
+    to the appropriate groups using a two-step create-then-write process
+    to be compatible with Odoo 19 CE.
     """
     # --- Create Faculty Users ---
     faculty_group = env.ref('charge_demo_module.group_openeducat_faculty_demo')
@@ -17,10 +18,12 @@ def _create_demo_users(env):
                 'name': faculty.name,
                 'login': f'faculty_{faculty.id}@demo.com',
                 'email': faculty.email.lower() if faculty.email else f'faculty_{faculty.id}@demo.com',
-                'groups_id': [(6, 0, [faculty_group.id, user_group.id])],
                 'faculty_id': faculty.id,
             }
-            env['res.users'].create(user_vals)
+            # Create the user first, without groups
+            user = env['res.users'].create(user_vals)
+            # Then, write the groups to the newly created user
+            user.write({'groups_id': [(6, 0, [faculty_group.id, user_group.id])]})
 
     # --- Create Student Users ---
     student_group = env.ref('charge_demo_module.group_openeducat_student_demo')
@@ -34,10 +37,12 @@ def _create_demo_users(env):
                 'name': student.name,
                 'login': f'student_{student.id}@demo.com',
                 'email': student.email.lower() if student.email else f'student_{student.id}@demo.com',
-                'groups_id': [(6, 0, [student_group.id, portal_group.id])],
                 'student_id': student.id,
             }
-            env['res.users'].create(user_vals)
+            # Create the user first, without groups
+            user = env['res.users'].create(user_vals)
+            # Then, write the groups to the newly created user
+            user.write({'groups_id': [(6, 0, [student_group.id, portal_group.id])]})
 
 
 def post_init_hook(env):
