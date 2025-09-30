@@ -22,8 +22,8 @@ def _create_demo_users(env):
             }
             # Create the user first, without groups
             user = env['res.users'].create(user_vals)
-            # Then, write the groups to the newly created user using the (4, id) command
-            user.write({'groups_id': [(4, faculty_group.id), (4, user_group.id)]})
+            # Then, write the groups to the newly created user using the (4, id) command and the correct field name
+            user.write({'group_ids': [(4, faculty_group.id), (4, user_group.id)]})
 
     # --- Create Student Users ---
     student_group = env.ref('charge_demo_module.group_openeducat_student_demo')
@@ -41,8 +41,8 @@ def _create_demo_users(env):
             }
             # Create the user first, without groups
             user = env['res.users'].create(user_vals)
-            # Then, write the groups to the newly created user using the (4, id) command
-            user.write({'groups_id': [(4, student_group.id), (4, portal_group.id)]})
+            # Then, write the groups to the newly created user using the (4, id) command and the correct field name
+            user.write({'group_ids': [(4, student_group.id), (4, portal_group.id)]})
 
 
 def post_init_hook(env):
