@@ -29,3 +29,18 @@ class OpFaculty(models.Model):
         for faculty in self:
             parts = [faculty.first_name, faculty.middle_name, faculty.last_name]
             faculty.name = ' '.join(part for part in parts if part)
+
+    def action_create_user(self):
+        for faculty in self:
+            if not faculty.user_id:
+                user_vals = {
+                    'name': faculty.name,
+                    'login': faculty.email or f"faculty_{faculty.id}",
+                    'email': faculty.email,
+                }
+                user = self.env['res.users'].sudo().create(user_vals)
+                faculty_group = self.env.ref('charge_demo_module.group_openeducat_faculty_demo')
+                user_group = self.env.ref('base.group_user')
+                user.sudo().write({'group_ids': [(6, 0, [faculty_group.id, user_group.id])]})
+                faculty.user_id = user.id
+        return True

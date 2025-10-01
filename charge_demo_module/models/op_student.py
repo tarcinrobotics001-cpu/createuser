@@ -42,3 +42,34 @@ class OpStudent(models.Model):
             # department to match the faculty's department.
             vals['department_id'] = user.faculty_id.department_id.id
         return super(OpStudent, self).create(vals)
+
+    def action_create_user(self):
+        for student in self:
+            if not student.user_id:
+                user_vals = {
+                    'name': student.name,
+                    'login': student.email or f"student_{student.id}",
+                    'email': student.email,
+                }
+                # Create the user. Odoo automatically assigns the 'Internal User' group.
+                user = self.env['res.users'].sudo().create(user_vals)
+
+                # Explicitly remove the default 'Internal User' group and add the correct portal and student groups.
+                student_group = self.env.ref('charge_demo_module.group_openeducat_student_demo')
+                portal_group = self.env.ref('base.group_portal')
+                internal_user_group = self.env.ref('base.group_user', raise_if_not_found=False)
+
+                if internal_user_group:
+                    user.sudo().write({'group_ids': [
+                        (3, internal_user_group.id),
+                        (4, portal_group.id),
+                        (4, student_group.id),
+                    ]})
+                else:
+                    user.sudo().write({'group_ids': [
+                        (4, portal_group.id),
+                        (4, student_group.id),
+                    ]})
+
+                student.user_id = user.id
+        return True

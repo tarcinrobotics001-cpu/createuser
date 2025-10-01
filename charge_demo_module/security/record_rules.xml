@@ -10,7 +10,7 @@
             <field name="perm_write" eval="True"/>
             <field name="perm_create" eval="True"/>
             <field name="perm_unlink" eval="False"/>
-            <field name="domain_force">['|', ('id', '=', user.student_id.id), ('create_uid', '=', user.id)]</field>
+            <field name="domain_force">[('id', '=', user.student_id.id)]</field>
         </record>
 
         <record id="op_assignment_student_rule" model="ir.rule">

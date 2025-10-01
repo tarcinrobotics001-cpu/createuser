@@ -7,9 +7,9 @@
         <field name="arch" type="xml">
             <form string="Student">
                 <header>
-                    <button name="%(charge_demo_module.create_student_wizard_action)d"
+                    <button name="action_create_user"
                             string="Create User"
-                            type="action"
+                            type="object"
                             class="btn-primary"
                             attrs="{'invisible': [('user_id', '!=', False)]}"/>
                 </header>
