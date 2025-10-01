@@ -20,7 +20,7 @@ class CreateUserWizard(models.TransientModel):
             faculty = self.env['op.faculty'].browse(active_id)
             res.update({
                 'faculty_id': active_id,
-                'login': faculty.email,
+                'login': faculty.email or '',
             })
         return res
 
@@ -29,7 +29,7 @@ class CreateUserWizard(models.TransientModel):
         if self.faculty_id.user_id:
             raise UserError("This faculty member already has a linked user account.")
 
-        # Create the user record first, without groups
+        # Create the user record first
         user_vals = {
             'name': self.name,
             'login': self.login,
@@ -41,7 +41,7 @@ class CreateUserWizard(models.TransientModel):
         # Then, assign the correct groups
         faculty_group = self.env.ref('charge_demo_module.group_openeducat_faculty_demo')
         user_group = self.env.ref('base.group_user')
-        user.write({'group_ids': [(6, 0, [faculty_group.id, user_group.id])]})
+        user.write({'groups_id': [(6, 0, [faculty_group.id, user_group.id])]})
 
         # Link the user back to the faculty record
         self.faculty_id.user_id = user.id

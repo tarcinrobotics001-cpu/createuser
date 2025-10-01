@@ -20,7 +20,7 @@ class CreateStudentWizard(models.TransientModel):
             student = self.env['op.student'].browse(active_id)
             res.update({
                 'student_id': active_id,
-                'login': student.email,
+                'login': student.email or '',
             })
         return res
 
