@@ -5,30 +5,20 @@ from odoo import models, fields, api
 class OpFaculty(models.Model):
     _name = 'op.faculty'
     _description = 'Faculty'
+    _inherit = 'res.partner'
 
-    first_name = fields.Char(string='First Name', required=True)
-    middle_name = fields.Char(string='Middle Name')
-    last_name = fields.Char(string='Last Name', required=True)
-    name = fields.Char(string='Name', compute='_compute_name', store=True)
+    is_faculty = fields.Boolean(string='Is a Faculty Member', default=True)
 
-    email = fields.Char(string='Email')
-    phone = fields.Char(string='Phone')
-    street = fields.Char()
-    street2 = fields.Char()
-    city = fields.Char()
-    state_id = fields.Many2one('res.country.state', string='State')
-    zip = fields.Char()
-    country_id = fields.Many2one('res.country', string='Country')
-
+    # Faculty-specific fields
     hire_date = fields.Date(string='Hire Date')
     department_id = fields.Many2one('op.department', string='Department')
     user_id = fields.Many2one('res.users', string='User', ondelete='set null', help="User account for this faculty member.")
 
-    @api.depends('first_name', 'middle_name', 'last_name')
-    def _compute_name(self):
-        for faculty in self:
-            parts = [faculty.first_name, faculty.middle_name, faculty.last_name]
-            faculty.name = ' '.join(part for part in parts if part)
+    @api.model
+    def create(self, vals):
+        # Set company_type to 'person' for faculty members
+        vals['company_type'] = 'person'
+        return super(OpFaculty, self).create(vals)
 
     def action_create_user(self):
         for faculty in self:
@@ -37,10 +27,11 @@ class OpFaculty(models.Model):
                     'name': faculty.name,
                     'login': faculty.email or f"faculty_{faculty.id}",
                     'email': faculty.email,
+                    'partner_id': faculty.id,
                 }
                 user = self.env['res.users'].sudo().create(user_vals)
                 faculty_group = self.env.ref('charge_demo_module.group_openeducat_faculty_demo')
                 user_group = self.env.ref('base.group_user')
-                user.sudo().write({'group_ids': [(6, 0, [faculty_group.id, user_group.id])]})
+                user.sudo().write({'groups_id': [(6, 0, [faculty_group.id, user_group.id])]})
                 faculty.user_id = user.id
         return True

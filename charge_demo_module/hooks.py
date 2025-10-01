@@ -7,9 +7,9 @@ def post_init_hook(env):
     same action methods that are used by the form buttons.
     """
     # Create users for demo faculty
-    faculty_records = env['op.faculty'].search([])
+    faculty_records = env['op.faculty'].search([('is_faculty', '=', True)])
     faculty_records.action_create_user()
 
     # Create users for demo students
-    student_records = env['op.student'].search([])
+    student_records = env['op.student'].search([('is_student', '=', True)])
     student_records.action_create_user()
