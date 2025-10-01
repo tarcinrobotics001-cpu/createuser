@@ -4,7 +4,6 @@
         <!-- Student Group -->
         <record id="group_openeducat_student_demo" model="res.groups">
             <field name="name">Student (Demo)</field>
-            <field name="implied_ids" eval="[(4, ref('base.group_portal'))]"/>
         </record>
 
         <!-- Faculty Group -->
