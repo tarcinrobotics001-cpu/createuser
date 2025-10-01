@@ -11,7 +11,7 @@ access_op_department_faculty,op.department faculty,model_op_department,charge_de
 access_op_subject_faculty,op.subject faculty,model_op_subject,charge_demo_module.group_openeducat_faculty_demo,1,1,1,1
 access_op_assignment_faculty,op.assignment faculty,model_op_assignment,charge_demo_module.group_openeducat_faculty_demo,1,1,1,1
 
-access_op_student_student,op.student student,model_op_student,charge_demo_module.group_openeducat_student_demo,1,0,0,0
+access_op_student_student,op.student student,model_op_student,charge_demo_module.group_openeducat_student_demo,1,0,1,0
 access_op_faculty_student,op.faculty student,model_op_faculty,charge_demo_module.group_openeducat_student_demo,1,0,0,0
 access_op_department_student,op.department student,model_op_department,charge_demo_module.group_openeducat_student_demo,1,0,0,0
 access_op_subject_student,op.subject student,model_op_subject,charge_demo_module.group_openeducat_student_demo,1,0,0,0

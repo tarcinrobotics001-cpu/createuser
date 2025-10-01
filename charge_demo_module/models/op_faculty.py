@@ -22,9 +22,25 @@ class OpFaculty(models.Model):
 
     hire_date = fields.Date(string='Hire Date')
     department_id = fields.Many2one('op.department', string='Department')
+    user_id = fields.Many2one('res.users', string='User', ondelete='set null', help="User account for this faculty member.")
 
     @api.depends('first_name', 'middle_name', 'last_name')
     def _compute_name(self):
         for faculty in self:
             parts = [faculty.first_name, faculty.middle_name, faculty.last_name]
             faculty.name = ' '.join(part for part in parts if part)
+
+    def action_create_user(self):
+        for faculty in self:
+            if not faculty.user_id:
+                user_vals = {
+                    'name': faculty.name,
+                    'login': faculty.email or f"faculty_{faculty.id}",
+                    'email': faculty.email,
+                }
+                user = self.env['res.users'].sudo().create(user_vals)
+                faculty_group = self.env.ref('charge_demo_module.group_openeducat_faculty_demo')
+                user_group = self.env.ref('base.group_user')
+                user.sudo().write({'group_ids': [(6, 0, [faculty_group.id, user_group.id])]})
+                faculty.user_id = user.id
+        return True
